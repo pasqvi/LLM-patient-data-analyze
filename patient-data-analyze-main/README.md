@@ -26,7 +26,7 @@ Use `-g` (`--only-global`) to only output the datasheet for all drugs.
 - Alla riga 109 di ./src/compute_patient_data/compute_output_data_v2.py cambiare il nome della funzione per scegliere se usare PDD o DDD.
 - Alla riga 186 di ./src/compute_patient_data/compute_output_data_v2.py cambiare il nome del file di output a piacimento.
 
-##Runnare il codice:
+## Runnare il codice:
 * Spostarsi con cd dentro patient-data-analyze-main
 * Use a recent version of Python (3.12 recommended)
 * Create a Python virtual environment: `python -m venv venv`
