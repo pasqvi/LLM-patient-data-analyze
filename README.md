@@ -9,6 +9,6 @@ This repo contains tools and Colab Notebooks to execute fine-tuning and inferenc
 - [**fine-tuning_and_inference_notebooks**](./fine-tuning_and_inference_notebooks): contine tutti i Colab Notebooks con il codice per eseguire fine-tuning ed inferenza.
 - [**risultati_inferenza**](./risultati_inferenza): contine i risultati dell'inferenza svolta con diversi modelli precedentemente addestrati.
 
-  **All'interno di ogni directory sarà presente un README specifico all'utilizzo di ogni tool.**
+  **All'interno di ogni directory sarà presente un README specifico per l'utilizzo di ogni tool.**
 
 
