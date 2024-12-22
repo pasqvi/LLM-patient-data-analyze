@@ -1,5 +1,5 @@
 
-#- Per generare i datasets globali seguire la seguente guida scritta da Florian Monfort:
+# Per generare i datasets globali seguire la seguente guida scritta da Florian Monfort:
 
 ## Install
 
@@ -19,7 +19,7 @@ The generated datasheets will be in the `output` folder by default. Use `-o <pat
 
 Use `-g` (`--only-global`) to only output the datasheet for all drugs.
 
-#- Per generare i datasets ad intervalli seguire invece quest'altra:
+# Per generare i datasets ad intervalli seguire invece quest'altra:
 
 
 
