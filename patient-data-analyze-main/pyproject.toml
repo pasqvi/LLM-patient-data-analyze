@@ -1,0 +1,54 @@
+[project]
+authors = [
+    {name="Florian Monfort", email="fmonfort@enssat.fr"},
+]
+name = "patient-data-analyse"
+description = "Analyzing efficiency of patient therapies based on data in an Excel file and exporting computed results in CSV files, then fine-tuning an LLM to predict adherence and follow-up persistence of treatments on patients based on their demographic information"
+dependencies = []
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.optional-dependencies]
+compute = [
+    "pandas",
+    "openpyxl",
+    "xlrd",
+]
+llm = [
+    "accelerate",
+    "bitsandbytes",
+    "datasets",
+    "peft",
+    "torch",
+    "transformers",
+]
+compare = ["scikit-learn"]
+quality = [
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+    "pylint",
+]
+test = ["pytest"]
+
+[tool.black]
+exclude = "\\.venv|venv"
+# See https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#line-length
+line-length = 120
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 120  # Probable bug: should reuse black.line-length
+
+[tool.mypy]
+exclude = [".venv", "venv"]
+
+[tool.pylint]
+max-line-length = 120
+disable = ["logging-fstring-interpolation"]
+
+[tool.setuptools]
+py-modules = []
