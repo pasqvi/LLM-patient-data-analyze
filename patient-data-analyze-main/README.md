@@ -1,6 +1,5 @@
-# Patient data analyze
 
-This project aims to determine if an LLM can predict data on patients' treatment.
+# Per generare i datasets globali seguire la seguente guida scritta da Florian Monfort:
 
 ## Install
 
@@ -18,42 +17,6 @@ The generated datasheets will be in the `output` folder by default. Use `-o <pat
 
 Use `-g` (`--only-global`) to only output the datasheet for all drugs.
 
-## Fine-tuning the model
+# Per generare i datasets ad intervalli seguire invece quest'altra:
 
-A fine-tuned version of Mistral 7B has been trained on Google Colab, see `predict_patient_data/llm_finetuning.ipynb`.
 
-To run it again, upload the `output_global.csv` to your Drive home directory and add a HuggingFace personal token as a *secret* named `HF_TOKEN`, with notebook access checked.
-
-An equivalent non-Colab version is available (GPU required):
-
-* Install required dependencies: `pip install ".[llm]"`
-* Provide `HF_TOKEN` as an environment variable
-  * For example with Bash: `export HF_TOKEN=<your_token>`
-  * Or as an IDE environment configuration
-* Run `python src/finetune_llm.py -f <input_file> [-o <output_directory>]`
-  * For example, with the previously generated output file: `python src/finetune_llm.py -f output/output_global.csv`
-
-## Using the fine-tuned model to make predictions
-
-* Provide `HF_TOKEN` as an environment variable (see instructions in previous section)
-* Provide the fine-tuned model in `mistralai/Mistral-7B-v0.1-patient-data-analyze/`
-* Run `python src/predict_with_llm.py -f <input_file> [-o <output_file>]`
-  * For example, with the previously generated output file: `python src/predict_with_llm.py -f output/output_global.csv -o output/predictions.json`
-
-## Evaluate the predictions
-
-* Install required dependencies `pip install ".[compare]"`
-* Run `python src/compare_results.py -f <input_file> -p <predictions_file>`
-  * For example, with the previously generated output and result files: `python src/compare_results.py -f output/output_global.csv -p output/predictions.json`
-
-## Code quality commands
-
-First run `pip install ".[quality]"`.
-
-* `black --diff .`
-* `flake8 --exclude=venv --max-line-length=120 .`
-* `isort --check --diff .`
-* `MYPYPATH=src mypy .`
-* `pylint src`
-
-Default configurations are provided in `pyproject.toml` for most of those tools.
