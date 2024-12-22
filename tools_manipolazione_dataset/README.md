@@ -1,1 +1,2 @@
-- **csvLinesEraser**
+- **csvLinesEraser**: permette di eliminare le ultime n righe di un file csv.
+- **margeColumns**: esegue il merge delle colonne di aderenza (bassa, intermedia, alta) in bassa e alta.
