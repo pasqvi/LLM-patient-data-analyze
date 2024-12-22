@@ -1,5 +1,5 @@
 # LLM-patient-data-analyze
-This repo contains tools and Colab Notebooks to execute fine-tuning and inference of an LLM to predict patients' adherence and follow-up persistence.
+This repo contains tools and Colab Notebooks to execute a classification task of an LLM to predict patients' adherence and follow-up persistence.
 
 # Le directory:
 
